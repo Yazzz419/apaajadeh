@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pesan Rahasia 💌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #1f1f1f;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      background: #2b2b2b;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      animation: fadeUp 1s ease;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 { font-size: 26px; color: #ff4d4d; margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.6; margin-top: 10px; color: #ddd; }
+    .btn-group {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 15px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .yes-btn { background: #ff4d4d; color: #fff; }
+    .yes-btn:hover { background: #cc0000; }
+    .no-btn { background: #444; color: #ccc; }
+    .no-btn:hover { background: #555; }
+    #response { margin-top: 30px; font-size: 17px; color: #a3ffbf; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>eh dasar kamu short hair fineshyt...</h1>
+    <p>kita emang ga kenal sih tapii...</p>
+    <p>i hv some feeling on u...</p>
+    <p>and honestly i hv ur number from my friend tapi yaa aku ngerasa ga enak ajaa...</p>
+    <p>so yeahh </p>
+
+    <div class="btn-group">
+      <button class="yes-btn" onclick="reply(true)">and if u kind of interested who am I u can click this </button>
+      <button class="no-btn" onclick="redirectApp()">sorry, im not interested</button>
+    </div>
+
+    <div id="response"></div>
+  </div>
+
+  <script>
+    function reply(isYes) {
+      const res = document.getElementById('response');
+      if (isYes) {
+        res.innerHTML = 'u can dm me on discord this is my usn @yaasss and if u dont play dc u can just chat me on wa mweheheh (just ask my number to my friend who send this to u) ';
+      }
+    }
+    function redirectApp() {
+      window.location.href = "https://vt.tiktok.com/ZSSek56TU/";
+    }
+  </script>
+</body>
+</html>
